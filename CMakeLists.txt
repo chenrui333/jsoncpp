@@ -179,8 +179,8 @@ if(JSONCPP_WITH_PKGCONFIG_SUPPORT)
         DESTINATION "${CMAKE_INSTALL_LIBDIR}/pkgconfig")
 endif()
 
+include(CMakePackageConfigHelpers)
 if(JSONCPP_WITH_CMAKE_PACKAGE)
-    include(CMakePackageConfigHelpers)
     install(EXPORT jsoncpp
         DESTINATION ${CMAKE_INSTALL_LIBDIR}/cmake/jsoncpp
         FILE        jsoncpp-targets.cmake)
